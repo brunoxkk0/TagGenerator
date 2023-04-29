@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: Monocraft, monospace;
+    src: url("/assets/Monocraft-nerd-fonts-patched.ttf") format("truetype");
+}
+
+:root{
+    background-color: #333333;
+    --tag-background: #8b008b;
+    --text-color: #FFFFFF;
+    --data: "";
+}
+
+.user-form{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.label{
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", serif;
+    font-size: 20px;
+}
+
+.button-gerar{
+    font-weight: bold;
+    font-family: "Roboto", serif;
+    font-size: 20px;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.tag-container{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--tag-background);
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px var(--text-color) solid;
+    padding: 2px 2px 2px 6px;
+    align-items: center;
+}
+
+.tag-text-block{
+    display: flex;
+    letter-spacing: 2px;
+}
+
+.font{
+    font-family: Monocraft, monospace;
+    font-size: 14px;
+}
+
+.tag{
+    text-align: center;
+    margin: 0;
+}
+
+.tag-primary{
+    color: var(--text-color);
+    z-index: 3;
+    position: relative;
+    margin-right: 2px;
+}
+
+.tag-primary:before{
+    content: attr(content);
+    transform: translateX(1%);
+    position: absolute;
+    background: var(--tag-background);
+    color: transparent;
+    background-clip: text;
+    filter: brightness(60%);
+    z-index: -2;
+}
+
+.tag-img{
+    height: 14px;
+    margin-right: 4px;
+}
+
+.tag-img-suffix{
+    margin-left: 4px;
+    margin-right: 4px;
+}
